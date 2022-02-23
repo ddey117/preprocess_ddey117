@@ -31,7 +31,7 @@ def get_uppercase_counts(x):
     return utils._get_uppercase_counts(x)
 
 def get_expan(x):
-    return utils._get_cont_exp(x)
+    return utils._get_expan(x)
 
 def get_emails(x):
     return utils._get_emails(x)
