@@ -11,6 +11,8 @@ import unicodedata
 from bs4 import BeautifulSoup
 from textblob import TextBlob
 
+nlp = spacy.load('en_core_web_sm')
+
 def _get_wordcounts(x):
     length = len(str(x).split())
     return length
@@ -42,7 +44,7 @@ def _get_digit_counts(x):
 def _get_uppercase_counts(x):
     return len([t for t in x.split() if t.isupper()])
 
-def _get_cont_exp(x):
+def _get_expan(x):
 
     str(x).lower()
 
