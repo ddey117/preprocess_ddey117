@@ -37,7 +37,7 @@ def _get_mention_counts(x):
     return mention_counts
 
 def _get_digit_counts(x):
-    retur len([t for t in x.split() if t.isdigit()])
+    return len([t for t in x.split() if t.isdigit()])
 
 def _get_uppercase_counts(x):
     return len([t for t in x.split() if t.isupper()])
