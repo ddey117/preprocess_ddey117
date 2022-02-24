@@ -11,7 +11,7 @@ import unicodedata
 from bs4 import BeautifulSoup
 from textblob import TextBlob
 
-nlp = spacy.load('en_core_web_sm')
+# nlp = spacy.load('en_core_web_sm')
 
 def _get_wordcounts(x):
     length = len(str(x).split())
@@ -288,18 +288,18 @@ def _remove_accented_chars(x):
 def _remove_stopwords(x):
     return ' '.join([t for t in x.split() if t not in stopwords])
 
-def _make_base(x):
-    x = str(x)
-    x_list = []
-    doc = nlp(x)
+# def _make_base(x):
+#     x = str(x)
+#     x_list = []
+#     doc = nlp(x)
 
-    for token in doc:
-        lemma = token.lemma_
-        if lemma == '-PRON-' or lemma == 'be':
-            lemma = token.text
+#     for token in doc:
+#         lemma = token.lemma_
+#         if lemma == '-PRON-' or lemma == 'be':
+#             lemma = token.text
 
-        x_list.append(lemma)
-    return ' '.join(x_list)
+#         x_list.append(lemma)
+#     return ' '.join(x_list)
 
 def _get_value_counts(df, col):
     text = ' '.join(df[col])
