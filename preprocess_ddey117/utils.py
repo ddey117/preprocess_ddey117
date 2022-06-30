@@ -318,6 +318,4 @@ def _remove_rarewords(x, freq, n=20):
     x = ' '.join([t for t in x.split() if t not in fn])
     return x
 
-def _spelling_correction(x):
-    x = TextBlob(x).correct()
-    return x
+
